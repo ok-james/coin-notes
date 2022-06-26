@@ -1,6 +1,6 @@
 <template>
   <div class="home-page-header">
-    <img :src="$withBase('/bitcoin-img.svg')">
+    <img :src="$withBase('/images/bitcoin-img.svg')">
   </div>
 </template>
 
