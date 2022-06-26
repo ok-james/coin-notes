@@ -32,33 +32,33 @@ module.exports = {
         }, {
           title: '06 - BTC-网络',
           path: '/btc/btc06'
-        },{
+        }, {
           title: '07 - BTC-挖矿难度',
           path: '/btc/btc07'
-        },{
+        }, {
           title: '08 - BTC-挖矿',
           path: '/btc/btc08'
-        },{
+        }, {
           title: '09 - BTC-比特币脚本',
           path: '/btc/btc09'
-        },{
+        }, {
           title: '10 - BTC-分叉',
           path: '/btc/btc10'
-        },{
+        }, {
           title: '11 - BTC-问答',
           path: '/btc/btc11'
-        },{
+        }, {
           title: '12 - BTC-匿名性',
           path: '/btc/btc12'
-        },{
+        }, {
           title: '13 - BTC-思考',
           path: '/btc/btc13'
         }]
       },
       {
         title: 'ETH',
-        children: [ /* ... */],
-        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+        path: '/eth/eth404',
+        children: []
       }
     ]
   },
