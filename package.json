@@ -1,0 +1,16 @@
+{
+  "name": "coin-notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ok-james/coin-notes",
+  "author": "james",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "sass-loader": "^13.0.1",
+    "vuepress": "^1.9.7"
+  }
+}
