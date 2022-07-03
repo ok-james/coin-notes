@@ -22,15 +22,15 @@ Unspent Transaction Output，未花费交易输出。
 
 正常情况下，挖矿就是不断调整 block header 中的 `nonce` 字段，但是由于现在挖矿难度的增加，单纯修改 `nonce` 字段的值可能已经无法完成工作量证明，此时，可以修改交易列表中的 `铸币交易` 的 `script` 字段。
 
-![Merkle proof](~@/images/05/input.png)
+![Merkle proof](~@/images/btc/05/input.png)
 
 而在原始的交易数据中，就可以看到对应的就是 `script` 字段：
 
-![Merkle proof](~@/images/05/script.png)
+![Merkle proof](~@/images/btc/05/script.png)
 
 由于这是一个铸币交易，所以 `inputs` 中的 `script` 脚本不会执行，可以是非法的，由下图可以证明：
 
-![Merkle proof](~@/images/05/script_invalid.png)
+![Merkle proof](~@/images/btc/05/script_invalid.png)
 
 切换到 *ASM* 以后，显示的是无效的 *ASM* 。
 

@@ -4,7 +4,7 @@ heroImage: /images/bitcoin-img.svg
 heroText: false
 tagline: 肖臻公开课 ——《区块链技术与应用》
 actionText: 开始 →
-actionLink: /btc/btc01
+actionLink: /overview01
 features:
   footer: MIT Licensed | Copyright © 2018-present Evan You
 ---

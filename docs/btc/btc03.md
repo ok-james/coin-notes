@@ -8,7 +8,7 @@
 
 ## 梅克尔树 Merkle tree
 
-![Merkle tree](~@/images/merkle_tree.png)
+![Merkle tree](~@/images/btc/merkle_tree.png)
 
 最下面一层是交易的数据块，上面的都是哈希指针（hash pointer），这个用于判断交易的数据块是否被修改过，由于这是树结构，计算的效率更高。
 
@@ -18,7 +18,7 @@
 
 提供梅克尔证明（Merkle proof）。
 
-![Merkle proof](~@/images/merkle_proof.png)
+![Merkle proof](~@/images/btc/merkle_proof.png)
 
 这个过程一般用于 `轻节点` 证明某个交易是否在一个区块中。
 

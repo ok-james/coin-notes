@@ -38,15 +38,15 @@
 
 在区块链上，交易是通过 `hex` 的形式保存的，要获取原始的 `hex` ，有多种方式，很多区块链浏览器都有查询原始交易 `hex` 的 API ，比如 [blockStream API](https://github.com/Blockstream/esplora/blob/master/API.md) ：
 
-![Merkle proof](~@/images/09/tx_api.png)
+![Merkle proof](~@/images/btc/09/tx_api.png)
 
 不过，最方便的方式还是通过 **[Get Raw Transaction in Hex Format](https://bitcoindata.science/bitcoin-raw-transaction-hex.html)** 这个工具直接查询，只需输入交易 hash 即可：
 
-![Merkle proof](~@/images/09/get_tx_raw.png)
+![Merkle proof](~@/images/btc/09/get_tx_raw.png)
 
 得到 `hex` 后，需要将其转换为 JSON 格式，可以通过 BLOCKCYPHER 的 [decodetx](https://live.blockcypher.com/btc/decodetx/) 这个工具完成：
 
-![Merkle proof](~@/images/09/decode_tx_raw.png)
+![Merkle proof](~@/images/btc/09/decode_tx_raw.png)
 
 #### 实例：921af728159e3019c18bbe0de9c70aa563ad27f3f562294d993a208d4fcfdd24 这个交易的原始 JSON
 
@@ -113,7 +113,7 @@
 
 通过脚本验证交易时，是先取当前交易的输入脚本（input script），之后拼接上币的来源交易的输出脚本（output script），然后执行拼接后的脚本，如果最终的执行结果没有问题，验证成功，否则，验证失败，交易无效，拼接的示意图如下：
 
-![Merkle proof](~@/images/09/script_basic.png)
+![Merkle proof](~@/images/btc/09/script_basic.png)
 
 > 这里再重点强调一下，输出脚本来自于币的来源（UTXO）所属的交易，而不是当前交易，一定要记住这一点。对于理解后面的内容，这一点非常重要。
 >
@@ -146,13 +146,13 @@ CHECKSI
 
 #### 实例
 
-![Merkle proof](~@/images/09/ins_one.png)
+![Merkle proof](~@/images/btc/09/ins_one.png)
 
 input的交易哈希是ea44e97271691990157559d0bdd9959e02790c34db6c006d779e82fa5aee708e
 
 另外，可以通过在 [Blockstream Explorer](https://blockstream.info) 上更直观的查看结果，如下：
 
-![Merkle proof](~@/images/09/ins_result_one.png)
+![Merkle proof](~@/images/btc/09/ins_result_one.png)
 
 ### P2PKH ( Pay to Public Key Hash )
 
@@ -194,7 +194,7 @@ CHECKSIG
 
 #### 实例
 
-![Merkle proof](~@/images/09/ins_two.png)
+![Merkle proof](~@/images/btc/09/ins_two.png)
 
 同样可以通过在 [Blockstream Explorer](https://blockstream.info) 上更直观的查看结果。
 
@@ -250,7 +250,7 @@ EQUAL
 
 #### 实例
 
-![Merkle proof](~@/images/09/ins_three.png)
+![Merkle proof](~@/images/btc/09/ins_three.png)
 
 上面的脚本所对应的流程如下：
 
@@ -276,7 +276,7 @@ CHECKSIG
 
 老师先举了一个不再推荐使用的多重签名的方式，这种方式没有使用到 `P2SH` ，如下图所示，那这种方式的问题是什么呢？
 
-![Merkle proof](~@/images/09/mul_sig_old.png)
+![Merkle proof](~@/images/btc/09/mul_sig_old.png)
 
 最主要的问题是 `output script` 中需要提供多个 `pubkey` 以及 `M` 和 `N` 的值，这就给支付者增加了负担。
 
@@ -288,7 +288,7 @@ CHECKSIG
 
 而使用 `P2SH` 后的多重签名如下：
 
-![Merkle proof](~@/images/09/mul_sig_new.png)
+![Merkle proof](~@/images/btc/09/mul_sig_new.png)
 
 仍然以上面的购物网站为例，此时，支付者 A 不再需要提供 `pubkey` 、 `M` 和 `N` 等信息，而只需要提供一个脚本的 hash 值即可，所有的验证操作都在 `redeemScript` 脚本中。
 
@@ -296,13 +296,13 @@ CHECKSIG
 
 #### 使用 P2SH 实现多重签名的实际例子
 
-![Merkle proof](~@/images/09/ins_four.png)
+![Merkle proof](~@/images/btc/09/ins_four.png)
 
 交易的哈希：bc26380619a36e0ecbb5bae4eebf78d8fdef24ba5ed5fd040e7bff37311e180d
 
 ### Proof of Burn
 
-![Merkle proof](~@/images/09/proof_of_burn.png)
+![Merkle proof](~@/images/btc/09/proof_of_burn.png)
 
 在输出脚本中有 `RETURN` 命令时，脚本执行永远会返回 FALSE ， `RETURN` 命令是证明销毁比特币的方法。
 

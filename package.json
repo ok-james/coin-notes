@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/ok-james/coin-notes",
+  "homepage": "https://ok-james.github.io/coin-notes/",
   "author": "james",
   "license": "MIT",
   "scripts": {

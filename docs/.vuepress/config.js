@@ -1,5 +1,5 @@
 const path = require('path')
-const defaultPath = '/btc/btc01'
+const defaultPath = '/overview01'
 
 module.exports = {
   title: '区块链学习笔记',
@@ -12,12 +12,13 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: '01 - 课程简介',
+        path: defaultPath
+      },
+      {
         title: 'BTC',
-        path: defaultPath,
+        path: '/btc/btc02',
         children: [{
-          title: '01 - 课程简介',
-          path: defaultPath
-        }, {
           title: '02 - BTC-密码学原理',
           path: '/btc/btc02'
         }, {
@@ -57,8 +58,48 @@ module.exports = {
       },
       {
         title: 'ETH',
-        path: '/eth/eth404',
-        children: []
+        path: '/eth/eth14',
+        children: [{
+          title: '14 - ETH-以太坊概述',
+          path: '/eth/eth14'
+        }, {
+          title: '15 - ETH-账户',
+          path: '/eth/eth15'
+        }, {
+          title: '16 - ETH-状态树',
+          path: '/eth/eth16'
+        }, {
+          title: '17 - ETH-交易树和收据树',
+          path: '/eth/eth17'
+        }, {
+          title: '18 - ETH-GHOST',
+          path: '/eth/eth18'
+        }, {
+          title: '19 - ETH-挖矿算法 ethash',
+          path: '/eth/eth19'
+        }, {
+          title: '20 - ETH-难度调整',
+          path: '/eth/eth20'
+        }, {
+          title: '21 - ETH-权益证明',
+          path: '/eth/eth21'
+        }, {
+          title: '22 - ETH-智能合约',
+          path: '/eth/eth22'
+        }, {
+          title: '23 - ETH-TheDAO',
+          path: '/eth/eth23'
+        }, {
+          title: '24 - ETH-反思',
+          path: '/eth/eth24'
+        }, {
+          title: '25 - ETH-美链',
+          path: '/eth/eth25'
+        }]
+      },
+      {
+        title: '26 - 总结',
+        path: '/summary26'
       }
     ]
   },
